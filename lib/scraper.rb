@@ -35,8 +35,7 @@ class Scraper
           students_hash[:linkedin] = url
         elsif url.include?("github")
           students_hash[:github] = url
-        else url.include?("blog")
-          binding.pry
+        else 
           students_hash[:blog] = url
       end
     end
