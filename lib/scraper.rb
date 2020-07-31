@@ -24,7 +24,7 @@ class Scraper
     students_hash = {}
 
     doc = Nokogiri::HTML(open(profile_url))
-    doc.css("div.social-icon-container a").each do |student|
+    doc.css("div.social-icon-container").each do |student|
         url = student.attribute("a href")
         if url.include? ("twitter")
           student_hash["twitter"]
