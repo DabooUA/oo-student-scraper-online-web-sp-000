@@ -34,7 +34,7 @@ class Scraper
         elsif url.include?("linkedin")
           students_hash[:linkedin] = url
         elsif url.include?("github")
-          students_hash[:linkedin] = url 
+          students_hash[:linkedin] = url
         elsif url.include?("blog")
           students_hash[:blog] = url
       end
