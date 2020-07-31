@@ -40,6 +40,7 @@ class Scraper
         students_hash[:bio] = html.css("div.bio-content p").text
     students_hash
   end
+end
     #students_hash = {}
 
     #doc = Nokogiri::HTML(open(profile_url))
@@ -72,6 +73,6 @@ class Scraper
     #    students_hash[:bio] = doc.css("div.bio-content p").text
     #students_hash
 
-  end
+  #end
 
 #end
