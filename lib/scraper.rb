@@ -28,6 +28,7 @@ class Scraper
       doc.each do |link|
         if link.attr('href').include?("twitter")
           students_hash[:twitter] = link.attr('href')
+          binding.pry
         elsif link.attr('href').include?("linkedin")
           students_hash[:linkedin] = link.attr('href')
         elsif link.attr('href').include?("github")
@@ -38,7 +39,7 @@ class Scraper
       end
       students_hash[:profile_quote] = doc.css(".profile-quote").text
       students_hash[:bio] = doc.css("div.description-holder p").text
-      binding.pry
+
       students_hash
 
       #  url = student.attribute("href")
