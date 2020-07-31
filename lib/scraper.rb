@@ -28,16 +28,12 @@ class Scraper
         url = student.attribute("a href")
         if url.include?("twitter")
           student_hash["twitter"]
-        #students_hash[:twitter] = url if url.include?("twitter")
         elsif url.include?("linkedin")
-        students_hash[:linkedin]
-        #students_hash[:linkedin] = url if url.include?("linkedin")
+          students_hash[:linkedin]
         elsif url.include?("github")
-        students_hash[:linkedin]
-        #students_hash[:github] = url if url.include?("github")
+          students_hash[:linkedin]
         elsif url.include?("blog")
-        students_hash[:blog]
-        #students_hash[:blog] = url if student.css("img").attribute("src").text.include?("rss")
+          students_hash[:blog]
       end
     end
         students_hash[:profile_quote] = html.css("div.profile-quote").text
