@@ -27,8 +27,6 @@ class Scraper
     doc.css("div.social-icon-container").each do |student|
         student.children.css("a").each do |icon_link|
         url = icon_link.attribute("href").value
-        #url = student.attribute("a href")
-        #binding.pry
         if url.include?("twitter")
           students_hash[:twitter] = url
         elsif url.include?("linkedin")
