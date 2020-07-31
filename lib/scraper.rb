@@ -30,7 +30,7 @@ class Scraper
         #url = student.attribute("a href")
         #binding.pry
         if url.include?("twitter")
-          student_hash["twitter"]
+          students_hash["twitter"]
         elsif url.include?("linkedin")
           students_hash[:linkedin]
         elsif url.include?("github")
