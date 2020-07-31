@@ -36,7 +36,7 @@ class Scraper
           students_hash[:blog] = link.attr('href')
         end
       end
-      binding.pry
+  
       students_hash[:profile_quote] = doc.css(".profile-quote").text
       students_hash[:bio] = doc.css("div.description-holder p").text
 
