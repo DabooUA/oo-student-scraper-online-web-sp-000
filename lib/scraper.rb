@@ -32,7 +32,7 @@ class Scraper
           students_hash[:linkedin] = link.attr('href')
         elsif link.attr('a href').include?("github")
           students_hash[:github] = link.attr('href')
-        elsif link.attr('a href').include?(".com")
+        elsif link.attr('a href').include?(".com/")
           students_hash[:blog] = link.attr('href')
         end
       end
