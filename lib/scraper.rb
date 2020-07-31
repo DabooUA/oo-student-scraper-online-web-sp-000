@@ -40,7 +40,7 @@ class Scraper
       end
     end
   end
-        students_hash[:profile_quote] = html.css("div.profile-quote").text
+        students_hash[:profile_quote] = doc.css("div.profile-quote").text
         students_hash[:bio] = html.css("div.bio-content-holder p").text
     students_hash
   end
