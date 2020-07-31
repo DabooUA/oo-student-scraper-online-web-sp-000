@@ -32,11 +32,11 @@ class Scraper
         if url.include?("twitter")
           students_hash["twitter"] = url
         elsif url.include?("linkedin")
-          students_hash[:linkedin]
+          students_hash[:linkedin] = url
         elsif url.include?("github")
-          students_hash[:linkedin]
+          students_hash[:linkedin] = url 
         elsif url.include?("blog")
-          students_hash[:blog]
+          students_hash[:blog] = url
       end
     end
   end
