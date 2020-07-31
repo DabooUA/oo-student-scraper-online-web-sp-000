@@ -27,13 +27,13 @@ class Scraper
     doc.css(".vitals-container.social-icon-controler a").collect{|icon| icon.attribute("href").value}
       doc.each do |link|
         if link.attr('a href').include?("twitter")
-          students_hash[:twitter] = link.attr('href')
+          students_hash[:twitter] = link.attr('href').text
         elsif link.attr('a href').include?("linkedin")
-          students_hash[:linkedin] = link.attr('href')
+          students_hash[:linkedin] = link.attr('href').text
         elsif link.attr('a href').include?("github")
-          students_hash[:github] = link.attr('href')
+          students_hash[:github] = link.attr('href').text
         elsif link.attr('a href').include?(".com")
-          students_hash[:blog] = link.attr('href')
+          students_hash[:blog] = link.attr('href').texr
         end
       end
   
